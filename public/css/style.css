@@ -1,0 +1,118 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url(/images/reigsterbg.jpg) no-repeat;
+  background-size: 100%;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+ .container .cf-b{
+    text-align-last: justify;
+}
+.container{
+    border: #eae5e5 solid 1px;
+    background: white;
+     z-index: 1;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+    padding-top: 15px;
+   
+    
+}
+.con-h1 h1{
+ text-align: center;
+ color: #2d456b;
+ margin-bottom: 30px;
+ font-size: 23px
+}
+.form-group{
+  margin-bottom: 25px;
+  color: rgb(102, 102, 102);
+  font-weight: normal;
+}
+
+#BOC{
+  margin-top: 100px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  padding-top: 10px;
+      z-index: 1;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+}
+/* #BOC .col-sm-9 {
+  background: rgba(255, 255, 255, 0.32)
+} */
+#BOC .col-sm-9 .form-control {
+  background: rgba(255, 255, 255, 0.32);
+  color: white;
+  border: 0
+}
+.btn{
+  background: #2D456B;
+  border-radius: 0;
+  color: white;
+   padding: 5px 25px;
+   cursor:default;
+}
+#resyy:hover{
+  color: white;
+
+}
+.form-group .col-sm-3 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.form-group input:focus{
+    outline: 0;
+    box-shadow: inset 0 0px 0px;
+}
+.col-sm-dd {
+   
+    margin-left: 24px;
+    margin-bottom: 25px;
+}
+.textdiv {
+  width: 50px;
+  float: left;
+}
+
+#BOC .col-sm-9 #cccc {
+    border-bottom: 1px solid #2D456B;
+    width: 200px;
+    padding-left: 56px;
+    margin-left: 77px;
+}
+#BOC .col-sm-9 #pppp {
+ border-bottom: 1px solid #2D456B;
+    width: 200px;
+    padding-left: 56px;
+    margin-left: 77px;
+    color: #b11f1f;
+}
+.form-group input{
+  cursor: default;
+  outline: none;
+  background: rgba(255, 255, 255, 0.32);
+    box-sizing:0;
+    border: 0;
+    box-shadow: 0;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+  border-bottom: 1px solid #2D456B;
+border-radius: 0;
+}
+.fb-c .col-sm-9{
+  margin-top: 5px;
+}
+#radio1{
+  color: aqua;
+  margin-left: 20px
+}
+#span{
+  margin-left: 30px;
+  color:#169BD5;
+}

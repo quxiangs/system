@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/moblie-manager.css">
+    <link rel="stylesheet" href="/css/typephone.css">
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/phone.js"></script>
+</head>
+
+<body id="body">
+    <div class="box">
+    </div>
+    <div class="index">
+        <%- include('./header.ejs')%>
+        <div class="container">
+            <%- include('./menu.ejs',{isAdmin:isAdmin}) %>
+            <div class="main moblie">
+                <!-- 修改弹出框 -->
+                <div class="updatashoping addshoping newlyshoping" id="deleteUp">
+                    <div class="hide"></div>
+                    <h2 onselectstart="return false">修改品牌信息</h2>
+                    <div class="add">
+                        <div style="display:none">
+                            <label>id</label>
+                            <input type="text" placeholder="id" name="idtype" class="price upprice newlyType idtype">
+                        </div>
+                        <div>
+                            <label>品牌名称</label>
+                            <input type="text" placeholder="请输入品牌" name="deldteType" class="price upprice newlyType" id="newlyType">
+                        </div>
+                        <div>
+                            <label>品牌LOGO</label>
+                            <input type="file" name="deletefile" class="papers" id="deletefile">
+                        </div>
+                        <div class="move">
+                            <div class="f-c" onselectstart="return false" id="deleteType">修改</div>
+                            <div class="f-c" onselectstart="return false" id="typeDelete">取消</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新增弹出框 -->
+                <div class="updatashoping addshoping newlyshoping">
+                    <div class="hide"></div>
+                    <h2 onselectstart="return false">新增品牌信息</h2>
+                    <div class="add">
+                        <div>
+                            <label>品牌名称</label>
+                            <input type="text" placeholder="请输入品牌" name="newlyType" class="price upprice newlyType" id="TYPE">
+                        </div>
+                        <div>
+                            <label>品牌LOGO</label>
+                            <input type="file" name="addfile" class="papers" id="addfile">
+                        </div>
+                        <div class="move">
+                            <div class="f-c" onselectstart="return false" id="addType">确认</div>
+                            <div class="f-c" onselectstart="return false" id="typeBtn">取消</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top">
+                    <p>新增品牌</p>
+                </div>
+               <!-- 品牌列表 -->
+                <table class="info">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>LOGO</th>
+                            <th>品牌名称</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    </tbody>
+                </table>
+                <!-- 条数 -->
+                <div class="listdiv" id="listdiv">
+                    <div class="Previo f-b fc"><span>&laquo;</span>
+                    </div>
+                    <div class="moveList f-b">
+                        <ul class="ulmove">
+                        </ul>
+                    </div>
+                    <div class="Next f-b fc"><span>&raquo;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

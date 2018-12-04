@@ -1,0 +1,239 @@
+
+.container #usermain {
+    background: #E0E0E0;
+}
+.box {
+    border: #1c4b5f 1px solid;
+    height: 100%;
+    width: 100%;
+    background: #d8bebd;
+    opacity: 0.4;
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+.user-main {
+    color: #5a3e3e;
+    position: relative;
+}
+.update_form {
+    z-index: 8;
+    border: 1px solid #9bb0bb;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    left: 335px;
+    top: 5px;
+    background:#e1e5ec;
+    background-size: 660px;
+    display: none;
+}
+.update_form label {
+    font-size: 16px;
+    margin-right: 10px;
+    width: 90px;
+    display: inline-block;
+    text-align-last: justify;
+}
+.update_form input[type='text'] {
+    outline: none;
+    width: 240px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    border: 1px solid #bfcbd2;
+    border-radius: 5px;
+    background: white;
+    color: #907779;
+}
+.update_form input[type='radio']:nth-of-type(2) {
+    margin-left: 42px;
+}
+.update_form input[name='sex']:nth-of-type(2) {
+    margin-left: 50px;
+}
+.update_form input[type='radio'] {
+    margin-right: 10px;
+}
+.update_form div {
+    margin: 20px 10px;
+}
+.update_form .f-c {
+    width: 80px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid  rgba(29, 105, 176, 0.7);
+    background: rgba(29, 105, 176, 0.7);
+    margin-left: 60px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: default;
+}
+.update_form button:hover {
+    background: rgba(43,80,162,1);
+    border: 1px solid rgba(43,80,162,1);
+}
+h4 {
+    font-weight: normal;
+    font-size: 26px;
+    text-align: center;
+}
+
+tr{
+    border: 1px solid #bfb2b2;
+    border-radius:5px;
+    text-align: center;
+    background: white;
+    cursor: default;
+}
+tr:hover {
+    background: #d8bebd;
+}
+th{
+    padding:8px 30px;
+    border: #bfb2b2 solid 1px;
+    background: #a99c9c;
+    /* padding-left: 44px; */
+}
+
+.tbody tr .lastTd {
+    position: absolute;
+    left: 159px;
+    text-align: center;
+    line-height: 40px;
+}
+.tbody tr .OneTd {
+    opacity: 0;
+}
+#userli{
+    border: 1px solid #bfb2b2; 
+}
+#userli td{
+    height: 40px;
+}
+.last{
+    margin-left: 5px;
+    color: #c51b1b;
+}
+a{
+    color: #2332bb;
+    text-decoration: none;
+}
+#userli {
+    margin: 35px 0 20px 120px;
+    max-height: 233px;
+    overflow: hidden;
+}
+.input{
+    margin: 80px 0px 0px 120px;
+    position: relative;
+}
+.home {
+    position:absolute;
+    text-align: center;
+    top:1px;
+    left: 297px;
+    font-size: 14px;
+    color: #cccccc;
+    outline: none;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background: #968989;
+}
+.home a {
+    color: #fdf9f9;
+    cursor: default;
+}
+.input input{
+    outline: none;
+    border: none;
+    border: 1px solid #9a8e8e;
+    width: 215px;
+    height: 33px;
+    padding-left: 15px;
+}
+.input button{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #fdf9f9;
+    outline: none;
+    width: 60px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background: #968989;
+    cursor: default;
+}
+#pagination{
+    position: absolute;
+    bottom: 100px;
+    right: 225px;
+    /* margin-left: 576px; */
+}
+.menu a.user {
+   background: #1c4b5f;
+   color: #d4dadc;
+}
+.pagination li {
+    float: left;
+}
+.pagination {
+    overflow: hidden;
+}
+.pagination a {
+    text-decoration: none;
+    color: #a77978;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d6c9c9;
+    border-right: none;
+    text-align: center;
+    line-height: 32px;
+}
+.pagination a.user_active{
+    background: #24353c;
+    color: white;
+}
+.pagination .Next {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 1px solid #bfb2b2;
+}
+
+.Img{
+    width: 825px;
+    height: 285px;
+    background: url(/images/none.png) no-repeat center;
+    background-color: white;
+    position: absolute;
+    left: 120px;
+    top: 189px;
+    display: none;
+}
+nav {
+    position: absolute;
+    left: 38%;
+    bottom: 110px;
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+li.move {
+    overflow: hidden;
+    height: 34px;
+    /* min-width: 132px; */
+    /* position: relative; */
+}
+li.move ol{
+    height: 34px;
+    /* max-width: 132px; */
+    /* position: absolute; */
+    /* left: -32px;  */
+
+}

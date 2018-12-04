@@ -1,0 +1,107 @@
+.index{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.header .logo{
+    width: 215px;
+    height: 100%;
+    background: url(/images/logo_01.png) no-repeat 13px 0;
+    background-size: 190px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    color: antiquewhite;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    background: #58646d;
+}
+.header_left{
+    margin-left: 45px;
+    font-size: 30px;
+    flex: 1;
+    font-family: SimSun;
+}
+.heared_right{
+    margin-right: 80px;
+    display: flex;
+    line-height: 35px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.heared_right p{
+    font-size: 16px;
+    margin-top: 7px;
+}
+.heared_right a{
+    margin-top: 10px;
+    width: 50px;
+    text-align: center;
+    height: 25px;
+    line-height: 26px;
+    margin-left: 30px;
+    text-decoration: none;
+    display: inline-block;
+    color: #cccccc;
+    cursor: default;
+
+}
+.heared_right a span {
+    position: relative;
+    top: 1px;
+    cursor: default;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.container{
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+.index #pagination {
+    padding-right: 0;
+    padding-left: 0;
+}
+.container .menu{
+    background: #5B5B5B;
+    font-size: 20px;
+    width: 148px;
+}
+.menu li {
+   text-align: center;
+}
+.container .menu a{
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border: 1px solid #bfb2b2;
+    border-left: 0;
+    border-right: 0;
+    color: #f1eeee;
+   cursor: default;
+   border-radius: 2px;
+}
+/* .menu a.user {
+   background: whitesmoke;
+   color: #b9807f;
+} */
+.container .main{
+    flex: 1;
+
+    background: #c18e8e;
+
+
+}
+.main p{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 30px;
+}
+.main .img{
+    width: 320px;
+    height: 320px;
+    margin: 35px auto;
+}

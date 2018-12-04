@@ -1,0 +1,77 @@
+.menu #phonetype{
+    background: #1c4b5f;
+    color: #d4dadc;
+}
+.container .menu .phoneList{
+    background: #5B5B5B;
+
+}
+.tbody img {
+    height: 38px;
+    width: 44px;
+}
+.tbody td {
+    padding: 0;
+    border: #1c4b5f 1px solid;
+    text-align: center;
+    width: 105px;
+    height: 76px;
+}
+
+.tbody {
+    position: relative;
+}
+ .tbody td.OneTd {
+    opacity: 0;
+ }
+ .tbody td.lastTd {
+     position: absolute;
+     left: 180px;
+     border: 0;
+     text-align: center;
+     line-height: 76px;
+ }
+.info th {
+    padding: 0;
+    border: #1c4b5f 1px solid;
+    text-align: center;
+    width: 105px;
+    height: 76px;
+}
+
+#listdiv {
+    line-height: 32px;
+    text-align: center;
+    height: 32px;
+    color: #7b7474;
+    position: absolute;
+    top: 480px;
+    left: 327px;
+}
+.act {
+background: #24353c;
+    color: white;
+}
+.typeUpdate {
+    color: #2332bb;
+}
+.typeDelete {
+    color: #c51b1b;
+}
+.typeDelete:hover {
+    text-decoration: underline;
+}
+#deletefile,#addfile{
+    border: 0;
+}
+.hide {
+    width: 146px;
+    height: 32px;
+    position: absolute;
+    left: 227px;
+    top: 152px;
+    /* opacity: 0; */
+    background: red;
+    z-index: 5;
+}
+    

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #defind {
+        display: none;
+        border: white 1px solid;
+        border-top: 0; 
+        width: 876px;
+        height: 285px;
+        position:absolute;
+        left: 180px;
+        top: 167px;
+        background: url(/images/none.png) no-repeat 69px 55px;
+        background-color: white;
+            box-shadow: 0px 0px 11px rgb(121, 112, 112);;
+        z-index: 5
+    }
+    .main #defind p {
+        color: #267ca0;
+        margin-left: 200px;
+    }
+    
+    
+    
+    
+    </style>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/moblie-manager.css">
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/moblie.js"></script>
+</head>
+
+<body id="body">
+    <div class="box">
+
+    </div>
+    <div class="index">
+        <%- include('./header.ejs')%>
+        <div class="container">
+            <%- include('./menu.ejs',{isAdmin:isAdmin}) %>
+            <div class="main moblie">
+
+                <div id="defind">
+                    <p>请增加手机信息......</p>
+                </div>
+
+
+                <div class="top">
+                    <p>新增手机</p>
+                </div>
+                <!-- 添加弹出框 -->
+                <div class="addshoping addShoping">
+                    <div class="hide"></div>
+                    <!-- <div class="border">
+                        <span>请选择文件</span>
+                    </div> -->
+                    <h2 onselectstart="return false">添加手机信息</h2>
+                    <div class="add">
+                        <div>
+                            <label>名称</label>
+                            <input type="text" placeholder="请输入手机名称" name="model" class="model">
+                        </div>
+                        <div class="typephone">
+                            <!-- <label>品牌</label>
+                            <select name="type" class="type">
+                                <option value="苹果">苹果</option>
+                                <option value="华为">华为</option>
+                                <option value="小米">小米</option>
+                                <option value="三星">三星</option>
+                                <option value="魅族">魅族</option>
+                                <option value="vivo">vivo</option>
+                            </select> -->
+                        </div>
+                        <div>
+                            <label>官方指导价</label>
+                            <input type="text" placeholder="请输入官方指导价" name="price" class="price">
+                        </div>
+                        <div>
+                            <label>二手回收价</label>
+                            <input type="text" placeholder="请输入二手回收价" name="usedprice" class="usedprice">
+                        </div>
+                        <div>
+                            <label>图片</label>
+                            <input type="file" name="file" class="papers" id="papers">
+                        </div>
+                        <div class="move">
+                            <div class="f-c" onselectstart="return false" id="sub">提交</div>
+                            <div class="f-c" id="cancel" onselectstart="return false">取消</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="updatashoping addshoping">
+                    <div class="hide"></div>
+                    <h2 onselectstart="return false">修改手机信息</h2>
+                    <div class="add">
+                        <div>
+                            <label>名称</label>
+                            <input type="text" placeholder="请输入手机名称" name="upmodel" class="model upmodel">
+                        </div>
+                        <div id="TypePhone">
+                            <label>品牌</label>
+                            <select name="uptype" class="uptype">
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label>官方指导价</label>
+                            <input type="text" placeholder="请输入官方指导价" name="upprice" class="price upprice">
+                        </div>
+                        <div style="display:none">
+                            <label>序号</label>
+                            <input type="text" name="upnum" class="num upnum">
+                        </div>
+                        <div>
+                            <label>二手回收价</label>
+                            <input type="text" placeholder="请输入二手回收价" name="upusedprice" class="usedprice upusedprice">
+                        </div>
+                        <div>
+                            <label>图片</label>
+                            <input type="file" name="upfile" class="papers" id="uppapers">
+                        </div>
+                        <div class="move">
+                            <div class="f-c" onselectstart="return false" id="updataShoping">修改</div>
+                            <div class="f-c" onselectstart="return false" id="noBtn">取消</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 商品信息列表 -->
+                <table class="info">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>图片</th>
+                            <th>手机名称</th>
+                            <th>所属品牌</th>
+                            <th>官方指导价</th>
+                            <th>二手回收价</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="typeBox">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="" alt="">
+                            </td>
+                            <td>苹果 iPhone XS Max</td>
+                            <td>苹果</td>
+                            <td>￥18000</td>
+                            <td>￥12000</td>
+                            <td>
+                                <span>修改</span>
+                                <span>删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 条数 -->
+                <div class="listdiv">
+                    <div class="Previo f-b fc"><span>&laquo;</span>
+                    </div>
+                    <div class="moveList f-b">
+                        <ul class="ulmove">
+                        </ul>
+                    </div>
+                    <div class="Next f-b fc"><span>&raquo;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

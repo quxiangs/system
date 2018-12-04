@@ -1,0 +1,38 @@
+<!-- 这是自定义的错误信息提示页面 -->
+<!-- code 错误编码 -->
+<!-- msg错误提示 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        div.verror{
+           border: rgb(254, 190, 172) 2px solid;
+           width: 350px;
+           font-size: 12px;
+          margin: 70px auto;
+          padding: 5px 17px;
+        }
+        h1,h2{
+            font-weight: normal;
+            height: 40px;
+            line-height: 40px;
+            color: #169BD5;
+        }
+    </style>
+</head>
+<body>
+    <div class="verror">
+        <h1>
+            错误编码:<%= code%>
+        </h1>
+        <h2>
+            <%= msg%>
+        </h2>
+    </div>
+</body>
+</html>

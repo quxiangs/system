@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/user-mansger.css">
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/user-manager.js"></script>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+    <div class="index">
+        <%- include('./header.ejs')%>
+        <div class="container">
+            <%- include('./menu.ejs',{isAdmin:isAdmin}) %>
+            <div class="main user-main" id="usermain">
+                <div class="Img">
+                
+                </div>
+                <form action="/users/updata" method="post" class="update_form" autocomplete="off">
+                    <h4>用户信息修改</h4>
+                    <div style="display:none">
+                        <label>page:</label>
+                        <input type="text" value="<%= page%>" name="page">
+                    </div>
+                    <div style="display:none">
+                        <label>nicknameurl:</label>
+                        <input type="text" value="<%= nicknameurl%>" name="nicknameurl">
+                    </div>
+                    <div style="display:none">
+                        <label>序号:</label>
+                        <input type="text"  value="" class="number" onselectstart="return false" name="id">
+                    </div>
+                    <div style="display:none">
+                        <label>用户名:</label>
+                        <input type="text" placeholder="用户名" name="username" class="username">
+                    </div>
+                    <div>
+                        <label>用户名:</label>
+                        <input type="text" placeholder="用户名" name="usernames" disabled="disabled" class="username">
+                    </div>
+                    <div>
+                        <label>用户昵称:</label>
+                        <input type="text" placeholder="用户昵称" name="nickname" class="nickname">
+                    </div>
+                    <div>
+                        <label>手机号码:</label>
+                        <input type="text" placeholder="手机号" name="phone" class="phone">
+                    </div>
+                    <div>
+                        <label>年龄:</label>
+                        <input type="text" placeholder="年龄" name="age" class="age">
+                    </div>
+                    <div>
+                        <label>性别:</label>
+                        <input type="radio" name="sex" value="1">男
+                        <input type="radio" name="sex" value="0" checked>女
+                    </div>
+                    <div id="isadmin">
+                        <label>管理员:</label>
+                        <input type="radio" name="isAdmin" value="1">yes
+                        <input type="radio" name="isAdmin" value="0" checked>no
+                    </div>
+                    <div>
+                        <button class="f-c" onselectstart="return false" id="sub">提交</button>
+                        <div class="f-c" id="btn" onselectstart="return false">取消</div>
+                    </div>
+                </form>
+                <div class="input">
+                    <form action="/search" method="get">
+                        <input type="text" name="nickname" id="text" placeholder="请输入昵称">
+                        <button>搜索</button>
+                    </form>
+                    <div class="home"><a href="/user-manager.html"> 首页</a></div>
+                </div>
+                <table id="userli">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>用户昵称</th>
+                            <th>手机号码</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>是否管理员</th>
+                            <th class="del">操作</th>
+                        </tr>
+                    </thead>
+                        <!-- 循坏 userList 显示用户数据 -->
+                    <tbody class="tbody">
+                       <% var arr = []%>
+                        <% for (var p = 1; p < COUNT + 1; p++) {%>
+                             <% arr.push(p)%> 
+                        <% } %>
+                        <%let baseArray=arr%> 
+                        <%let len=baseArray.length%> 
+                        <%let n=pageSize%>
+                        <%let lineNum=len % pageSize===0 ? len / pageSize : Math.floor((len / pageSize) + 1)%> 
+                        <%let newArr=[]%> 
+                            <%for(let q=0; q < lineNum; q++) {%>
+                                <%let temp=baseArray.slice(q * n, q * n + n)%> 
+                            <% newArr.push(temp)%> 
+                        <% }%>
+                        <% for (let i=0; i < userList.length ; i ++ ) { %>
+                        <tr>
+                            <td class="OneTd"><%= userList[i]._id %></td>
+                            <td><%= userList[i].username%></td>
+                            <td> <%= userList[i].nickname%></td>
+                            <td> <%= userList[i].phone%></td>
+                            <td><%= userList[i].sex || '-'%> </td>
+                            <td> <%= userList[i].age || '-'%></td>
+                            <td>
+                                <%= parseInt(userList[i].is_admin) ? '是' : '否' %>
+                            </td>
+                            <td class="del-td">
+                                <% if(userList[i].username === username){%>
+                                <a class="updeta">修改</a>
+                                <%} else if(parseInt(userList[i].is_admin)){ %>
+
+                                <% } else {%>
+                               
+                                    <% if (nicknameurl){%>
+                                        <a class="updeta">修改</a>
+                                        <a href="/delete?delnum=<%= userList[i]._id%>&page=<%= page%>&nickname=<%= nicknameurl%>" class="last">删除</a>
+                                    <% } else {%>
+                                        <a class="updeta">修改</a>
+                                        <a href="/delete?delnum=<%= userList[i]._id%>&page=<%= page%>" class="last">删除</a>
+                                        <% }%>
+                                <% }%>
+                            </td>
+                            <td class="lastTd">
+                                <%= newArr[page-1][i] %>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+                 <%- include('./navList.ejs')%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

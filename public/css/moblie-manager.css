@@ -1,0 +1,215 @@
+.box {
+    border: #1c4b5f 1px solid;
+    height: 100%;
+    width: 100%;
+    background: #d0cdcd;
+    opacity: 0.4;
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+.menu a.phoneList {
+    background: #1c4b5f;
+    color: #d4dadc;
+}
+.container .moblie {
+    background: white;
+}
+.main .top {
+    width: 100%;
+    border-bottom: 2px solid #fff9f9;
+    height: 98px;
+    background: #E0E0E0;
+    overflow: hidden;
+}
+.main .top p {
+    width: 133px;
+    height: 47px;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 47px;
+    color: #fdf9f9;
+    background: #968989;
+    cursor:default;
+    margin-left: 172px;
+    margin-top: 31px;
+}
+.moblie {
+    position: relative;
+}
+.addshoping {
+    width: 400px;
+    border: #1c4b5f solid 1px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -200px;
+    background: #fdf9f9;
+    z-index: 5;
+    display: none;
+}
+.addshoping h2 {
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: antiquewhite;
+    background: #1c4b5f;
+}
+.border {
+    border: #1c4b5f solid 1px;
+    width: 220px;
+    line-height: 32px;
+    height: 32px;
+    position: absolute;
+    left: 110px;
+    top: 324px;
+}
+.hide {
+    width: 146px;
+    height: 32px;
+    position: absolute;
+    left: 227px;
+    top: 328px;
+    opacity: 0;
+    z-index: 5;
+}
+#papers {
+    height: 23px;
+    border: 0;
+    padding-left: 0;
+}
+.addshoping input {
+    outline: none;
+    border: none;
+    border: #1c4b5f solid 1px;
+    width: 220px;
+    height: 32px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+#uppapers {
+    border: 0;
+}
+.add {
+    margin-top: 14px;
+    padding: 35px;
+}
+select {
+    width: 220px;
+    height: 32px;
+    border: #1c4b5f solid 1px;
+    color: #5d5959;
+    margin-bottom: 25px;
+    padding-left: 8px;
+}
+label {
+    display: inline-block;
+    width: 70px;
+    text-align-last: justify;
+    margin-right: 32px;
+}
+.move {
+    margin-left: 48px;
+    margin-bottom: 20px;
+}
+.f-c {
+    width: 65px;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid  rgba(29, 105, 176, 0.7);
+    background: rgba(29, 105, 176, 0.7);
+    margin-left: 60px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: default;
+}
+/* 商品信息表 */
+.info {
+    margin-top: 25px;
+    margin-left: 180px;
+}
+.info span {
+    cursor: default;
+}
+.info img{
+    height: 80px;
+    position: relative;
+    top: 3px;
+}
+.info td {
+    border: #1c4b5f 1px solid;
+    text-align: center;
+    width: 125px;
+    height: 95px;
+}
+/* #typeBox tr {
+    position: relative;
+    
+} */
+#typeBox td.numlist {
+    border: 0;
+    position: absolute;
+    left: 180px;
+    text-align: center;
+    line-height: 95px;
+}
+#typeBox td.oneTd {
+    opacity: 0;
+}
+
+
+.info th {
+    padding: 10px 25px;
+    border: #1c4b5f 1px solid;
+    text-align: center;
+}
+.info .upData {
+    cursor: default;
+    color: #2332bb
+}
+.info .noData {
+    color: #c51b1b;
+}
+.noData:hover{
+    text-decoration:underline;
+}
+.listdiv {
+    line-height: 32px;
+    text-align: center;
+    height: 32px;
+    color: #7b7474;
+    position: absolute;
+    top:480px;
+    left: 500px;
+}
+.listdiv .f-b {
+    float: left;
+    height: 100%;
+}
+.moveList li {
+    float: left;
+    height: 100%;
+}
+.ulmove li {
+    width: 32px;
+    height: 32px;
+    border: #6d8a96 solid 1px;
+    border-left:0;
+    cursor: default;
+}
+.fc {
+    width: 32px;
+    border: #6d8a96 solid 1px;
+    cursor: default;
+}
+.Next {
+    border-left:0;
+}
+.active{
+    background: #24353c;
+    color: white;
+}

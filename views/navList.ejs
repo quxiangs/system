@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="listnav">
+        <ul class="pagination">
+            <li>
+                <a class="Previous">
+                    <span>&laquo;</span>
+                </a>
+            </li>
+            <li class="move">
+                <ol>
+                    <% if(nicknameurl){%>
+                    <% for(var t = 0; t < totalPage; t++){ %>
+                    <%if (page == t+1){ %>
+                    <li><a href="/search?nickname=<%= nicknameurl%>&page=<%= t+1%>" class="user_active">
+                            <%= t+1%></a></li>
+                    <% } else {%>
+                    <li><a href="/search?nickname=<%= nicknameurl%>&page=<%= t+1%>">
+                            <%= t+1%></a></li>
+                    <% }%>
+                    <% }%>
+                    <% } else { %>
+                    <% for(var t = 0; t < totalPage; t++){ %>
+                    <%if (page == t+1){ %>
+                    <li><a href="/user-manager.html?page=<%= t+1%>" class="user_active">
+                            <%= t+1%></a></li>
+                    <% } else {%>
+                    <li><a href="/user-manager.html?page=<%= t+1%>">
+                            <%= t+1%></a></li>
+                    <% }%>
+                    <% }%>
+                    <% }%>
+                </ol>
+            </li>
+            <li>
+                <a class="Next">
+                    <span>&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bin/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container col-md-4 col-md-offset-4">
+        <div class="con-h1">
+            <h1>xxx后台管理系统</h1>
+        </div>
+        <form class="form-horizontal" method="POST" action="/users/register">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label cf-b">用户名</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="请输入用户名" name="username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label cf-b">密码</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control"  placeholder="请输入密码" name="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label cf-b">确认密码</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control"  placeholder="请确认输入密码" name="repassword">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label cf-b">昵称</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control"  placeholder="请输入昵称" name="nickname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label cf-b">手机号码</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control"  placeholder="请输入手机号码" name="phone">
+                </div>
+            </div>
+            <div class="form-group fb-c">
+                <label class="control-label col-sm-3 cf-b">管理员</label>
+                <div class="col-sm-9">
+                    <input type="radio" name="isAdmin" value="1"> 是
+                    <input type="radio" id="radio1" name="isAdmin" value="0" checked> 否
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                    <button type="submit" class="btn" id="resyy">注册</button>
+                    <a  href="/login.html" id="span">直接登录</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
